@@ -1,0 +1,27 @@
+ {% extends 'base.html' %} {% block body %}
+<div class="container my-4 ">
+    <center>
+        <h1>Your All Todos</h1>
+    </center>
+    <table class="table ">
+        <thead>
+            <tr>
+                <th scope="col">sno</th>
+                <th scope="col">Todo Title</th>
+                <th scope="col">Todo Description</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for todo in all %}
+            <tr>
+                <th scope="row">{{todo.sno}}</th>
+                <!-- <td>{{todo.sno}}</td> -->
+                <td>{{todo.title}}</td>
+                <td>{{todo.desc}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}
